@@ -15,6 +15,7 @@ __all__ = (
 __version__ = "7.2.7"
 
 import collections
+import os
 import collections.abc
 import functools
 import heapq
