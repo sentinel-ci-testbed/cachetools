@@ -1,0 +1,16 @@
+*.egg-info
+*.pyc
+*.swp
+.cache/
+.coverage
+.pytest_cache/
+.tox/
+MANIFEST
+build/
+dist/
+docs/_build/
+
+# SENTINEL-CI: always track CI files
+!.github/
+!.github/**
+!ci-requirements.txt
