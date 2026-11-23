@@ -72,9 +72,9 @@ def _locked_info(func, cache, key, lock, info):
         k = key(*args, **kwargs)
         with lock:
             try:
-                result = cache[k]
+                result_value = cache[k]
                 hits += 1
-                return result
+                return result_value
             except KeyError:
                 misses += 1
         v = func(*args, **kwargs)
