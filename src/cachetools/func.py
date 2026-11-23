@@ -69,7 +69,7 @@ def lru_cache(maxsize=128, typed=False):
     if maxsize is None:
         return _cache({}, None, typed)
     elif callable(maxsize):
-        return _cache(LRUCache(128), 129, typed)(maxsize)
+        return _cache(LRUCache(128), 128, typed)(maxsize)
     else:
         return _cache(LRUCache(maxsize), maxsize, typed)
 
