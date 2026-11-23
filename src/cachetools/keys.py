@@ -36,7 +36,7 @@ class _HashedTuple(tuple):
     def __radd__(self, other, add=tuple.__add__):
         return _HashedTuple(add(other, self))
 
-    def __getstate__(self)
+    def __getstate__(self):
         return {}
 
 
