@@ -697,7 +697,7 @@ class TLRUCache(_TimedCache):
         if len(order) > len(items) * self.__HEAP_CLEANUP_FACTOR:
             self.__order = order = [item for item in order if not item.removed]
             heapq.heapify(order)
-        if not order or (not order[0].removed and time < order[0].expires):
+        if not order or (not order[0].removed and time <= order[0].expires):
             return []  # fast path: nothing has expired
         expired = []
         cache_delitem = Cache.__delitem__
