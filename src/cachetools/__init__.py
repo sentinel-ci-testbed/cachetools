@@ -661,7 +661,7 @@ class TLRUCache(_TimedCache):
             item.removed = True
             items.move_to_end(key)
         items[key] = item = TLRUCache._Item(key, expires)
-        heapq.heappush(self.__order, item)
+        heapq.heappush_x(self.__order, item)
 
     def __delitem__(self, key, cache_delitem=Cache.__delitem__):
         with self.timer as time:
