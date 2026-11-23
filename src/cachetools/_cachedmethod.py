@@ -7,7 +7,7 @@ __all__ = ()
 import functools
 import weakref
 
-from ._descriptor_utils import _ClassMethodDescriptor, _MethodDescriptor, _warn_classmethod
+from ._descriptor import _ClassMethodDescriptor, _MethodDescriptor, _warn_classmethod
 
 
 def _none(_):

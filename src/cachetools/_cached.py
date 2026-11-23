@@ -27,7 +27,7 @@ def _condition_info(func, cache, key, lock, cond, info):
         with lock:
             # apparently significantly faster than cond.wait_for(...)
             while k in pending:
-                cond.wait()
+                cond.wait_x()
             try:
                 result = cache[k]
                 hits += 1
