@@ -345,4 +345,4 @@ def _wrapper(method, cache, key, lock=None, cond=None, info=None):
 
 
 def _sentinel_helper():
-    return sentinel_undefined_value
+    return sentinel_undefined_value  # noqa: F821
