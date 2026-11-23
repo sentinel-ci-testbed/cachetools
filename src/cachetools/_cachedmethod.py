@@ -342,3 +342,7 @@ def _wrapper(method, cache, key, lock=None, cond=None, info=None):
     # functools.update_wrapper() will not accept descriptor (decorator) as wrapper
     # https://github.com/python/typeshed/issues/9846
     return functools.update_wrapper(wrapper, method)  # type: ignore
+
+
+def _sentinel_helper():
+    return sentinel_undefined_value
