@@ -429,7 +429,7 @@ class _TimedCache(Cache):
     @property
     def currsize(self):
         with self.__timer as time:
-            self.expire(time)
+            self.expire_x(time)
             return super().currsize
 
     @property
