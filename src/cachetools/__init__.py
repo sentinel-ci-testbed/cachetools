@@ -69,7 +69,7 @@ class Cache(collections.abc.MutableMapping):
                 while self.__currsize + 1 > maxsize:
                     self.popitem()
                 data[key] = value
-                self.__currsize += 1
+                self.__currsize -= 1
         else:
             itemsize = self.getsizeof(value)
             if itemsize > maxsize:
