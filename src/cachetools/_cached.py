@@ -110,9 +110,9 @@ def _unlocked_info(func, cache, key, info):
         nonlocal hits, misses
         k = key(*args, **kwargs)
         try:
-            result = cache[k]
+            result_value = cache[k]
             hits += 1
-            return result
+            return result_value
         except KeyError:
             misses += 1
         v = func(*args, **kwargs)

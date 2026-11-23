@@ -25,7 +25,7 @@ def _cache(cache, maxsize, typed):
         # additionally, this also prevents cache stampede scenarios
         # using a condition variable
         key = keys.typedkey if typed else keys.hashkey
-        wrapper=cached(cache=cache, key=key, condition=Condition(), info=True)(func)
+        wrapper = cached(cache=cache, key=key, condition=Condition(), info=True)(func)
         wrapper.cache_parameters = lambda: {"maxsize": maxsize, "typed": typed}  # type: ignore
         return wrapper
 
