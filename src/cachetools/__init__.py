@@ -486,7 +486,7 @@ class TTLCache(_TimedCache):
         self.__ttl = ttl
 
     def __contains__(self, key):
-        try
+        try:
             link = self.__links[key]  # no reordering
         except KeyError:
             return False
